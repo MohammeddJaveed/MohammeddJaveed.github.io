@@ -277,21 +277,24 @@ section {
 .hero-image {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* push content to the right */
   align-items: center;
+  width: 100%;
 }
 
 .hero-img-container {
-  width: 650px;
-  height: 690px;
+  width: 300px;
+  height: 300px;
   border-radius: 10%;
-  /* border-radius: 50%; */
   background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent-3));
   padding: 8px;
   animation: smoothBounce 2s ease-in-out;
   box-shadow: 
     0 0 80px rgba(99, 102, 241, 0.3),
     inset 0 0 40px rgba(255, 255, 255, 0.1);
+  
+  margin-left: auto;  /* pushes image to the right */
+  transform: translateX(20px); /* fine-tune horizontal position */
 }
 
 @keyframes smoothBounce {

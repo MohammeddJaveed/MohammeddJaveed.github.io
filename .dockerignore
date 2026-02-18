@@ -1,9 +1,12 @@
 node_modules
 .next
 out
+.git
+.gitignore
+README.md
+terraform
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.DS_Store
-terraform/aws-ec2-static-site/terraform.tfvars

@@ -1,0 +1,12 @@
+region           = "eu-west-1"
+vpc_id           = "vpc-xxxxxxxx"
+subnet_id        = "subnet-xxxxxxxx"
+key_name         = "your-existing-keypair"
+private_key_path = "/Users/javeed/.ssh/your-key.pem"
+out_dir          = "/Users/javeed/Desktop/ALIVE/PROJECTS/Portfolio/out"
+
+# Optional:
+# project_name  = "portfolio-site"
+# instance_type = "t3.micro"
+# ami_id        = ""
+# ssh_cidr      = "YOUR_PUBLIC_IP/32"

@@ -180,14 +180,14 @@ export const education = [
     duration: "2024 – 2025"
   },
   {
-    degree: "Bachelor's in Computer Programming",
-    institution: "MS Ramaiah College",
+    degree: "Bachelor's in Computer Application",
+    institution: "MS Ramaiah College of Arts, Science and Commerce",
     duration: "2019 – 2022"
   }
 ] as const;
 
 export const contactInfo = {
-  email: "mdjaveed9108@gmail.com",
+  email: "Javeed.sde@gmail.com",
   phone: "+353 89 409 4920",
   linkedin: "https://linkedin.com/in/mohammed-javee-",
   github: "https://github.com/MohammeddJaveed"

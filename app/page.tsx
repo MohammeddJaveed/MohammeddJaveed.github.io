@@ -27,7 +27,6 @@ export default function HomePage() {
   const [headerVisible, setHeaderVisible] = useState(true);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [cursor, setCursor] = useState({ x: 0, y: 0, active: false });
   const [theme, setTheme] = useState<ThemeMode>("light");
 
   const year = useMemo(() => new Date().getFullYear(), []);
@@ -94,21 +93,6 @@ export default function HomePage() {
     window.localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
-  useEffect(() => {
-    const onMove = (event: MouseEvent) => {
-      setCursor({ x: event.clientX, y: event.clientY, active: true });
-    };
-    const onLeave = () => setCursor((prev) => ({ ...prev, active: false }));
-
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseleave", onLeave);
-
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseleave", onLeave);
-    };
-  }, []);
-
   function goTo(id: string) {
     const section = document.getElementById(id);
     if (section) {
@@ -163,12 +147,6 @@ export default function HomePage() {
     <main className="ref-shell" data-theme={theme}>
       <FluidBackground />
       <BalloonFall />
-      <div
-        className={`cursor-rocket ${cursor.active ? "active" : ""}`}
-        style={{ left: cursor.x, top: cursor.y }}
-      >
-        🚀
-      </div>
 
       <header className={`ref-header ${headerVisible ? "show" : "hide"}`}>
         <div className="container ref-nav-row">
@@ -538,15 +516,6 @@ export default function HomePage() {
               <div className="contact-links-panel">
                 <a href={`mailto:${contactInfo.email}`}>
                   📧 {contactInfo.email}
-                </a>
-                <a href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}>
-                  📞 {contactInfo.phone}
-                </a>
-                <a href={contactInfo.linkedin} target="_blank" rel="noreferrer">
-                  🔗 linkedin.com/in/mohammed-javee-
-                </a>
-                <a href={contactInfo.github} target="_blank" rel="noreferrer">
-                  🔗 github.com/MohammeddJaveed
                 </a>
               </div>
               <div className="contact-status-card">

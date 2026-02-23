@@ -40,7 +40,7 @@
   --input-bg: #ffffff;
   --footer-text: #6f5c97;
   --about-large-bg: linear-gradient(rgba(255, 255, 255, 0.96), rgba(251, 246, 255, 0.96));
-  --section-lead: #d5c7f1;
+  --section-lead: #eae5f5;
 }
 
 [data-theme="dark"] {
@@ -100,7 +100,7 @@ body {
   color: var(--text);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
-  cursor: none;
+  cursor: auto;
 }
 
 button,
@@ -252,23 +252,6 @@ textarea {
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
   color: #aeb8d9;
-}
-
-.cursor-rocket {
-  position: fixed;
-  margin-left: -10px;
-  margin-top: -18px;
-  pointer-events: none;
-  z-index: 80;
-  opacity: 0;
-  transition: transform 120ms ease, opacity 120ms ease;
-  font-size: 1.3rem;
-  line-height: 1;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.38));
-}
-
-.cursor-rocket.active {
-  opacity: 1;
 }
 
 .ref-header {
@@ -643,6 +626,7 @@ textarea {
 
 .project-ref-card h3 {
   margin-top: 0;
+  color: magenta;
 }
 
 .project-ref-card p {
@@ -655,7 +639,7 @@ textarea {
 
 .section-lead {
   margin: 0 0 1.2rem;
-  color: var(--section-lead);
+  color: rgb(5, 160, 250);
   font-weight: 500;
   max-width: 72ch;
 }
@@ -963,7 +947,7 @@ textarea {
 .certificate-year {
   margin: 0 0 0.4rem;
   font-size: 0.78rem;
-  color: #9dc0ff !important;
+  color: #08c3e8 !important;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -972,6 +956,7 @@ textarea {
 .certificate-card h3 {
   margin: 0 0 0.4rem;
   font-size: 1.1rem;
+  color: magenta;
 }
 
 .certificate-card p {
@@ -983,10 +968,10 @@ textarea {
   display: inline-block;
   margin-top: 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(87, 224, 210, 0.5);
+  border: 1px solid rgba(4, 70, 25, 0.5);
   padding: 0.25rem 0.6rem;
   font-size: 0.72rem;
-  color: #82f4db;
+  color: #0d7704;
   font-weight: 700;
 }
 
@@ -1006,6 +991,7 @@ textarea {
 
 .achievement-card h3 {
   margin: 0 0 0.45rem;
+  color: magenta;
 }
 
 .achievement-card p {
@@ -1059,11 +1045,12 @@ textarea {
   border-radius: 1rem;
   padding: 1rem;
   background: var(--surface-card);
-  box-shadow: 0 14px 32px rgba(8, 12, 29, 0.4);
+  box-shadow: 0 14px 32px rgba(233, 69, 4, 0.4);
 }
 
 .timeline-item-ref h3 {
   margin: 0.4rem 0 0.2rem;
+  color: magenta;
 }
 
 .timeline-item-ref h4 {
@@ -1077,7 +1064,7 @@ textarea {
 }
 
 .timeline-item-ref p:first-child {
-  color: #a3b5ff;
+  color: #08c3e8 !important;;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -1107,6 +1094,7 @@ textarea {
   display: grid;
   gap: 0.45rem;
   margin-bottom: 0.8rem;
+  color: var(--text-strong);
 }
 
 .contact-form-ref input,
@@ -1197,6 +1185,7 @@ textarea {
 .contact-status-card h3 {
   margin: 0.35rem 0;
   font-size: 1.02rem;
+  color: magenta;
 }
 
 .contact-status-card span {
@@ -1253,7 +1242,7 @@ textarea {
 
 .footer-ref p {
   margin: 0;
-  color: var(--footer-text);
+  color: white;
 }
 
 .footer-ref div {
@@ -1263,7 +1252,8 @@ textarea {
 
 .footer-ref a {
   text-decoration: none;
-  color: var(--text-soft);
+  color: white;
+  text-decoration: underline;
 }
 
 .balloon-canvas {
@@ -1286,14 +1276,6 @@ textarea {
 }
 
 @media (max-width: 900px) {
-  body {
-    cursor: auto;
-  }
-
-  .cursor-rocket {
-    display: none;
-  }
-
   .hero-ref-grid {
     grid-template-columns: 1fr;
   }
